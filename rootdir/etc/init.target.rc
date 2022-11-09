@@ -120,6 +120,10 @@ on post-fs
         enable vendor.qvirtvendorservice
         start  vendor.qvirtvendorservice
 
+    # Workaround for cache
+    rm /data/resource-cache
+    rm /data/system/package_cache
+
 on late-fs
     #exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
