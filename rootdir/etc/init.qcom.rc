@@ -200,6 +200,10 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
+    # Report max frequency to unity tasks.
+    write /proc/sys/walt/sched_lib_name "UnityMain,libunity.so,libil2cpp.so,com.miHoYo.,com.pubg.imobile,com.pubg.,com.activision."
+    write /proc/sys/walt/sched_lib_mask_force 255
+
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
