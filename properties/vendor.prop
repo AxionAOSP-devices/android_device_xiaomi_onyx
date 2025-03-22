@@ -74,6 +74,13 @@ drm.service.enabled=true
 persist.vendor.fingerprint.type=udfps_optical
 persist.vendor.fingerprint.sensor_location=640|2518|105
 
+# QTI input optimizations
+ro.vendor.qti.cgroup_follow.enable=true
+persist.vendor.qti.inputopts.enable=true
+persist.vendor.qti.inputopts.movetouchslop=0.6
+# Adreno
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
