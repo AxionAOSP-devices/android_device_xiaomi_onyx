@@ -15,8 +15,9 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
 import com.xiaomi.settings.R;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
-public class ChargingControlFragment extends PreferenceFragment implements
+public class ChargingControlFragment extends SettingsBasePreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     @Override
