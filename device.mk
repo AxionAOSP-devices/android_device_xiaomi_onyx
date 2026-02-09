@@ -487,3 +487,21 @@ PRODUCT_COPY_FILES += \
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/onyx/onyx-vendor.mk)
+
+# Inherit Google Camera
+$(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk) 
+
+#Axion Stuff
+TARGET_INCLUDES_LOS_PREBUILTS := true
+TARGET_ENABLE_BLUR := true
+AXION_CAMERA_REAR_INFO := 50,8
+AXION_CAMERA_FRONT_INFO := 20
+AXION_MAINTAINER := Zarathos_Ghost_Rider
+AXION_PROCESSOR := SM8735
+LINEAGE_BUILDTYPE := OFFICIAL
+
+#Axion Performance Mode
+PERF_GOV_SUPPORTED := false
+PERF_DEFAULT_GOV := walt
+GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
