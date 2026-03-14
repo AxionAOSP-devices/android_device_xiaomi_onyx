@@ -16,16 +16,8 @@ $(call inherit-product, device/xiaomi/onyx/device.mk)
 PRODUCT_NAME := lineage_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := 25053PC47G
 
-PRODUCT_SYSTEM_NAME := onyx_global
-PRODUCT_SYSTEM_DEVICE := onyx
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="onyx_global-user 15 AQ3A.250226.002 OS3.0.6.0.WOLMIXM release-keys" \
-    BuildFingerprint=POCO/onyx_global/onyx:15/AQ3A.250226.002/OS3.0.6.0.WOLMIXM:user/release-keys \
-    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
-    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BuildFingerprint=POCO/onyx_global/onyx:16/BP2A.250605.031.A3/OS3.0.6.0.WOLMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
