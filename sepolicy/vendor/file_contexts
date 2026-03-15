@@ -112,6 +112,9 @@
 /dsp(/.*)?                                              u:object_r:adsprpcd_file:s0
 /firmware(/.*)?                                         u:object_r:vendor_firmware_file:s0
 
+# Power
+/vendor/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr                      u:object_r:hal_power_default_exec:s0
+
 # QRTR
 /(vendor|system/vendor)/bin/qrtr-lookup u:object_r:vendor_qrtr_exec:s0
 
