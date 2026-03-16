@@ -18,7 +18,7 @@ import android.util.Log;
 
 public class DoubleTapService extends Service {
     private static final String TAG = "DoubleTapService";
-    private static final String DT2W_PROP = "persist.vendor.xiaomi.dt2w";
+    private static final String DT2W_PROP = "sys.xiaomi.dt2w";
 
     @Override
     public void onCreate() {
@@ -49,7 +49,11 @@ public class DoubleTapService extends Service {
             0
         );
         Log.i(TAG, "DT2W setting changed: " + enabled);
-        SystemProperties.set(DT2W_PROP, String.valueOf(enabled));
+        try {
+            SystemProperties.set(DT2W_PROP, String.valueOf(enabled));
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to set DT2W property", e);
+        }
     }
 
     @Override

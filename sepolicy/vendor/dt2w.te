@@ -4,5 +4,3 @@ type dt2w, domain;
 init_daemon_domain(dt2w)
 
 allow dt2w touchfeature_device:chr_file rw_file_perms;
-
-get_prop(dt2w, vendor_dt2w_prop)
