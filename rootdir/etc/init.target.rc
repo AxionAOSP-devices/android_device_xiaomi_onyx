@@ -417,6 +417,10 @@ on post-fs-data
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
+    # Charging Control
+    chown system system /sys/devices/platform/soc/soc:mca_charge_interface/input_suspend
+    chmod 0660 /sys/devices/platform/soc/soc:mca_charge_interface/input_suspend
+
     # add torch node for cit && mmi
     chown system system /sys/class/leds/led:torch_0/brightness
     chown system system /sys/class/leds/led:torch_1/brightness
