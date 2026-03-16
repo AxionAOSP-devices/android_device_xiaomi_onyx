@@ -12,4 +12,8 @@
     <string name="htsr_title">Touch Responsiveness</string>
     <string name="htsr_enable_title">Increase Touch Responsiveness</string>
     <string name="htsr_enable_summary">Increases touch polling rate to decrease latency</string>
+
+    <!-- Charging Control -->
+    <string name="charging_control_title">Charging Control</string>
+    <string name="charging_limit_title">Stop at Percentage</string>
 </resources>

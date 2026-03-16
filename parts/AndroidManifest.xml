@@ -47,6 +47,11 @@
             android:exported="false">
         </service>
 
+        <service
+            android:name=".battery.ChargingLimitService"
+            android:permission="ChargingLimitService">
+        </service>
+
         <!-- Activity for Touch Sampling Settings -->
         <activity
             android:name=".touchsampling.TouchSamplingSettingsActivity"
