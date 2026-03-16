@@ -1,0 +1,5 @@
+cc_binary {
+    name: "dt2w_ctl",
+    vendor: true,
+    srcs: ["dt2w_ctl.c"],
+}

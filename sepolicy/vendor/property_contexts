@@ -220,6 +220,9 @@ persist.vendor.sensors.used.framebuffer u:object_r:vendor_usedframebuffer_prop:s
 vendor.sys.thermal.bcl.boot_completed u:object_r:vendor_thermal_normal_prop:s0
 vendor.sys.thermal.data.path u:object_r:vendor_thermal_normal_prop:s0
 
+# Touch
+persist.vendor.xiaomi.dt2w u:object_r:vendor_dt2w_prop:s0
+
 # Touchfeature
 persist.vendor.hostprocess. u:object_r:vendor_touch_hostprocess_prop:s0
 persist.vendor.touchfeature. u:object_r:vendor_touchfeature_prop:s0

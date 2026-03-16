@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V12-ndk.vendor  \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor
 
+# Double Tap to Wake
+PRODUCT_PACKAGES += \
+    dt2w_ctl
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -400,8 +404,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libpowermode-ext-onyx)
 
 # Properties
 PRODUCT_COPY_FILES += \

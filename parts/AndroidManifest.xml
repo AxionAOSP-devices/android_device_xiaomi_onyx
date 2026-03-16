@@ -42,6 +42,11 @@
             android:permission="ColorModeService">
         </service>
 
+        <service
+            android:name=".touch.DoubleTapService"
+            android:exported="false">
+        </service>
+
         <!-- Activity for Touch Sampling Settings -->
         <activity
             android:name=".touchsampling.TouchSamplingSettingsActivity"
