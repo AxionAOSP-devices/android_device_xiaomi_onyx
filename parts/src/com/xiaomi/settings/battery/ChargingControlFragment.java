@@ -9,9 +9,9 @@ package com.xiaomi.settings.battery;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.UserHandle;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
 import com.xiaomi.settings.R;
@@ -33,7 +33,7 @@ public class ChargingControlFragment extends SettingsBasePreferenceFragment impl
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Intent intent = new Intent(getContext(), ChargingLimitService.class);
-        getContext().startService(intent);
+        getContext().startServiceAsUser(intent, UserHandle.CURRENT);
 
         if (preference.getKey().equals(BatteryUtils.PREF_CHARGING_LIMIT)) {
             int value = (int) newValue;
