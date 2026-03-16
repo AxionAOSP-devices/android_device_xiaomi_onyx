@@ -47,7 +47,7 @@ public class ChargingLimitService extends Service {
         boolean isPlugged = status == BatteryManager.BATTERY_STATUS_CHARGING ||
                           status == BatteryManager.BATTERY_STATUS_FULL;
 
-        if (isEnabled && isPlugged && level >= limit) {
+        if (isEnabled && isPlugged && level >= limit - 2) {
             BatteryUtils.setChargingSuspend(true);
         } else {
             BatteryUtils.setChargingSuspend(false);
