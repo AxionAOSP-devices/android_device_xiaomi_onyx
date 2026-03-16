@@ -9,6 +9,7 @@ package com.xiaomi.settings.battery;
 import android.os.Bundle;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.xiaomi.settings.R;
 
 public class ChargingControlActivity extends CollapsingToolbarBaseActivity {
 
@@ -18,8 +19,7 @@ public class ChargingControlActivity extends CollapsingToolbarBaseActivity {
 
         getFragmentManager()
                 .beginTransaction()
-                .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                        new ChargingControlFragment())
+                .replace(R.id.content_frame, new ChargingControlFragment())
                 .commit();
     }
 }
