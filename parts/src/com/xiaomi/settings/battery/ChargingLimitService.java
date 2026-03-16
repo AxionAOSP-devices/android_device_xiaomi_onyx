@@ -11,24 +11,29 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.BatteryManager;
 import android.os.IBinder;
-import android.content.SharedPreferences;
+
 import androidx.preference.PreferenceManager;
 
 public class ChargingLimitService extends Service {
-    private final BroadcastReceiver mBatteryReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            updateChargingState(context, intent);
-        }
-    };
+    private BroadcastReceiver mBatteryReceiver;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_BATTERY_CHANGED);
-        registerReceiver(mBatteryReceiver, filter);
+        if (mBatteryReceiver == null) {
+            mBatteryReceiver = new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    if (Intent.ACTION_BATTERY_CHANGED.equals(intent.getAction())) {
+                        updateChargingState(context, intent);
+                    }
+                }
+            };
+            IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+            registerReceiver(mBatteryReceiver, filter);
+        }
         return START_STICKY;
     }
 
@@ -47,6 +52,15 @@ public class ChargingLimitService extends Service {
         } else {
             BatteryUtils.setChargingSuspend(false);
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mBatteryReceiver != null) {
+            unregisterReceiver(mBatteryReceiver);
+            mBatteryReceiver = null;
+        }
+        super.onDestroy();
     }
 
     @Override

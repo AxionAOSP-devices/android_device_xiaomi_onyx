@@ -743,13 +743,6 @@ on property:sys.boot_completed=1
 on property:persist.vendor.xiaomi.dt2w=*
     exec -- /vendor/bin/dt2w_ctl ${persist.vendor.xiaomi.dt2w}
 
-# Charging Control
-on property:sys.battery.suspend=1
-    write /sys/devices/platform/soc/soc:mca_charge_interface/input_suspend 1
-
-on property:sys.battery.suspend=0
-    write /sys/devices/platform/soc/soc:mca_charge_interface/input_suspend 0
-
 service mi-serial-sh /odm/bin/init.mi.serial.sh
     class late_start
     user root
