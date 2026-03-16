@@ -52,9 +52,9 @@
         <activity
             android:name=".battery.ChargingControlActivity"
             android:label="@string/charging_control_title"
-            android:theme="@style/Theme.SubSettingsBase"
-            android:exported="false">
-            <intent-filter>
+            android:theme="@style/Theme.SubSettingsBase.Expressive"
+            android:exported="true">
+            <intent-filter android:priority="1">
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
             <meta-data
