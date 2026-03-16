@@ -3,4 +3,4 @@
 ro.miui.build.region u:object_r:vendor_miui_region_prop:s0
 
 # DT2W
-sys.xiaomi.dt2w u:object_r:dt2w_prop:s0
+sys.xiaomi.dt2w u:object_r:exported3_system_prop:s0
