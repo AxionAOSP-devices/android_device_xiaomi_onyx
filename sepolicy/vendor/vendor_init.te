@@ -1,0 +1,5 @@
+# Bluetooth
+set_prop(vendor_init, vendor_btstack_prop)
+
+# MIUI
+set_prop(vendor_init, vendor_miui_region_prop)

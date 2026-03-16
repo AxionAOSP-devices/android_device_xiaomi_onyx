@@ -1,5 +1,10 @@
 # Audio
 persist.vendor.audio.cloud u:object_r:vendor_audio_cloud_ctrl_mi_prop:s0
+persist.vendor.audio.pa. u:object_r:vendor_audio_prop:s0
+vendor.audio.chk.cal. u:object_r:vendor_audio_prop:s0
+
+# Bluetooth
+persist.vendor.btstack. u:object_r:vendor_btstack_prop:s0
 
 # Camera
 persist.vendor.EnableP3ColorSpace u:object_r:vendor_camera_p3enable_prop:s0
