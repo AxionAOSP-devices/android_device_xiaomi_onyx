@@ -22,8 +22,13 @@ public class BatteryUtils {
         try (FileOutputStream fos = new FileOutputStream(INPUT_SUSPEND_PATH)) {
             String value = "micharger buck " + (suspend ? "1" : "0");
             fos.write(value.getBytes());
+            Log.d(TAG, "Successfully wrote " + value + " to " + INPUT_SUSPEND_PATH);
         } catch (IOException e) {
             Log.e(TAG, "Failed to write to " + INPUT_SUSPEND_PATH, e);
         }
+    }
+
+    public static void setChargingSuspendAsync(boolean suspend) {
+        new Thread(() -> setChargingSuspend(suspend)).start();
     }
 }

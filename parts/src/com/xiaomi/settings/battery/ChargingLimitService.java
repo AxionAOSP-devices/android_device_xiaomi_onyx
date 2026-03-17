@@ -18,47 +18,55 @@ import android.os.IBinder;
 import androidx.preference.PreferenceManager;
 
 public class ChargingLimitService extends Service {
-    private BroadcastReceiver mBatteryReceiver;
+    private boolean mReceiverRegistered = false;
+
+    private final BroadcastReceiver mBatteryReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (Intent.ACTION_BATTERY_CHANGED.equals(intent.getAction())) {
+                updateChargingState(context, intent);
+            }
+        }
+    };
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (mBatteryReceiver == null) {
-            mBatteryReceiver = new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    if (Intent.ACTION_BATTERY_CHANGED.equals(intent.getAction())) {
-                        updateChargingState(context, intent);
-                    }
-                }
-            };
-            IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-            registerReceiver(mBatteryReceiver, filter);
+        IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent batteryStatus = getApplicationContext().registerReceiver(null, filter);
+        updateChargingState(this, batteryStatus);
+
+        if (!mReceiverRegistered) {
+            getApplicationContext().registerReceiver(mBatteryReceiver, filter);
+            mReceiverRegistered = true;
         }
         return START_STICKY;
     }
 
     private void updateChargingState(Context context, Intent intent) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        if (intent == null) return;
+
+        Context storageContext = context.createDeviceProtectedStorageContext();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(storageContext);
+
         boolean isEnabled = prefs.getBoolean(BatteryUtils.PREF_CHARGING_CTRL, false);
+        if (!isEnabled) {
+            BatteryUtils.setChargingSuspendAsync(false);
+            return;
+        }
+
         int limit = prefs.getInt(BatteryUtils.PREF_CHARGING_LIMIT, 80);
-
         int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-        int status = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
-        boolean isPlugged = status == BatteryManager.BATTERY_STATUS_CHARGING ||
-                          status == BatteryManager.BATTERY_STATUS_FULL;
 
-        if (isEnabled && isPlugged && level >= limit - 2) {
-            BatteryUtils.setChargingSuspend(true);
-        } else {
-            BatteryUtils.setChargingSuspend(false);
+        if (level != -1) {
+            BatteryUtils.setChargingSuspendAsync(level >= limit);
         }
     }
 
     @Override
     public void onDestroy() {
-        if (mBatteryReceiver != null) {
-            unregisterReceiver(mBatteryReceiver);
-            mBatteryReceiver = null;
+        if (mReceiverRegistered) {
+            getApplicationContext().unregisterReceiver(mBatteryReceiver);
+            mReceiverRegistered = false;
         }
         super.onDestroy();
     }
