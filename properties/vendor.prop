@@ -63,9 +63,6 @@ vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 ro.product.marketname=POCO F7
 ro.product.mod_device=onyx_global
 
-# Displayfeature
-ro.vendor.displayfeature.dump=true
-
 # Dex2oat
 dalvik.vm.dex2oat-cpu-set=4,5,6,7
 dalvik.vm.dex2oat-threads=4
