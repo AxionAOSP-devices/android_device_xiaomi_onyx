@@ -134,7 +134,7 @@ PRODUCT_COPY_FILES += \
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_PROPERTIES += \
     pm.dexopt.post-boot=speed \
-    pm.dexopt.first-boot=speed \
+    pm.dexopt.first-boot=speed-profile \
     pm.dexopt.boot-after-ota=speed-profile \
     pm.dexopt.boot-after-mainline-update=speed \
     pm.dexopt.install=speed-profile \
@@ -145,7 +145,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     pm.dexopt.install-bulk-secondary-downgraded=speed \
     pm.dexopt.bg-dexopt=speed-profile \
     pm.dexopt.ab-ota=speed-profile \
-    pm.dexopt.inactive=speed \
+    pm.dexopt.inactive=verify \
     pm.dexopt.cmdline=speed \
     pm.dexopt.first-use=speed-profile \
     pm.dexopt.secondary=speed-profile \
