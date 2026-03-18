@@ -1,0 +1,14 @@
+type thermal_batt_manager, domain;
+type thermal_batt_manager_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(thermal_batt_manager)
+
+allow thermal_batt_manager vendor_sysfs_battery_supply:dir r_dir_perms;
+allow thermal_batt_manager vendor_sysfs_battery_supply:file rw_file_perms;
+allow thermal_batt_manager sysfs_batteryinfo:dir r_dir_perms;
+allow thermal_batt_manager sysfs_batteryinfo:file rw_file_perms;
+allow thermal_batt_manager sysfs:dir search;
+allow thermal_batt_manager kmsg_device:chr_file rw_file_perms;
+
+allow init vendor_sysfs_battery_supply:dir setattr;
+allow init vendor_sysfs_battery_supply:file setattr;

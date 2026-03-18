@@ -231,6 +231,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.micharge-service-dummy
 
+# Thermal Battery Manager
+PRODUCT_PACKAGES += \
+    thermal_batt_manager
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \

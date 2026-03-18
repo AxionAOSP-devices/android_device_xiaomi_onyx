@@ -126,6 +126,7 @@
 
 # Thermal
 /(vendor|system/vendor)/bin/mi_thermald u:object_r:mi_thermald_exec:s0
+/vendor/bin/thermal_batt_manager u:object_r:thermal_batt_manager_exec:s0
 /data/vendor/thermal(/.*)? u:object_r:thermal_data_file:s0
 /sys/class/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0
 /sys/class/thermal/thermal_message/torch_real_level u:object_r:sys_thermal_torch_real_level:s0

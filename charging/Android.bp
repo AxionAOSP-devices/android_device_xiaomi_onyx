@@ -1,0 +1,12 @@
+cc_binary {
+    name: "thermal_batt_manager",
+    vendor: true,
+    srcs: ["charging.cpp"],
+    shared_libs: ["liblog"],
+    cflags: [
+        "-O3",
+        "-Wall",
+        "-Werror",
+    ],
+    init_rc: ["thermal_batt_manager.rc"],
+}
