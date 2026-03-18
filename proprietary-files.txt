@@ -2704,6 +2704,7 @@ vendor/lib64/libnicm_netlink.so
 vendor/lib64/libnicm_recovery.so
 vendor/lib64/libnicm_utils.so
 vendor/lib64/libnicm_vh.so
+vendor/lib64/libnova.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
