@@ -17,7 +17,8 @@ public class ChargingControlActivity extends CollapsingToolbarBaseActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(com.xiaomi.settings.R.id.content_frame, new ChargingControlFragment())
+                .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+                        new ChargingControlFragment())
                 .commit();
     }
 }
