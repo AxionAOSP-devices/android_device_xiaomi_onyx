@@ -10,11 +10,6 @@ echo "Cloning kernel source tree..."
 rm -rf device/xiaomi/onyx-kernel
 git clone -b lineage-23.1 https://github.com/AxionAOSP-devices/android_kernel_xiaomi_onyx.git device/xiaomi/onyx-kernel
 
-# Google Camera (fresh clone)
-echo "Cloning Google Camera"
-rm -rf vendor/xiaomi/GoogleCamera
-git clone -b 16 https://github.com/Onyx-Hubs/vendor_xiaomi_GoogleCamera.git vendor/xiaomi/GoogleCamera
-
 # Lunaris Dolby (fresh clone)
 echo "Cloning Lunaris Dolby"
 rm -rf packages/apps/LunarisDolby

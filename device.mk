@@ -563,9 +563,6 @@ PRODUCT_COPY_FILES += \
 # Vendor
 $(call inherit-product, vendor/xiaomi/onyx/onyx-vendor.mk)
 
-# Inherit Google Camera
-$(call inherit-product-if-exists, vendor/xiaomi/GoogleCamera/config.mk) 
-
 #Axion Stuff
 TARGET_INCLUDES_LOS_PREBUILTS := true
 TARGET_ENABLE_BLUR := true
