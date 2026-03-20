@@ -432,7 +432,6 @@ odm/etc/camera/cameradfx_config.json
 odm/etc/camera/cameraopt.json
 odm/etc/camera/cameraopt_perf.json
 odm/etc/camera/camerascene.json
-odm/etc/camera/camxoverridesettings.txt
 odm/etc/camera/com.xiaomi.dcal.w_07.u_10.golden
 odm/etc/camera/com.xiaomi.dcal.w_10.u_01.golden
 odm/etc/camera/default_param.json
