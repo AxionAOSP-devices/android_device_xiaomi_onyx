@@ -1,6 +1,7 @@
 # MIUI compat properties - must be defined in system-side contexts
 # since ro.miui.* is not a vendor-allowed prefix
 ro.miui.build.region u:object_r:vendor_miui_region_prop:s0
+ro.miui.customized.region u:object_r:vendor_miui_region_prop:s0
 
 # DT2W
 sys.xiaomi.dt2w u:object_r:exported3_system_prop:s0

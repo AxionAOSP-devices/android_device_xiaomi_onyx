@@ -208,6 +208,7 @@ vendor.powerhal. u:object_r:vendor_power_prop:s0
 persist.vendor.radio.imei u:object_r:vendor_deviceid_prop:s0
 persist.vendor.radio.meid u:object_r:vendor_deviceid_prop:s0
 ro.vendor.miui.build.region u:object_r:vendor_miui_region_prop:s0
+ro.vendor.miui.customized.region u:object_r:vendor_miui_region_prop:s0
 ro.vendor.miui.singlesim u:object_r:vendor_miui_singlesim_prop:s0
 ro.vendor.oem.boot_completed u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.ctacode u:object_r:vendor_sno_prop:s0
