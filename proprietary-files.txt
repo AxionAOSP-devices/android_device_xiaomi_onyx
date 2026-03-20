@@ -2732,6 +2732,7 @@ vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 vendor/lib64/vendor.qti.qspmhal-impl.so
 
 # RIL
+vendor/bin/init.xiaomi.modem.sh
 odm/etc/me_config.xml
 product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/UimGba.xml
@@ -2806,6 +2807,7 @@ vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/nicmd.rc
 vendor/etc/init/port-bridge.rc
+vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/qwesd.rc
 vendor/etc/init/shsusrd.rc
