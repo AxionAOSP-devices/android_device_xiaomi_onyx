@@ -1,6 +1,3 @@
-# CNE
-persist.vendor.cne.feature=1
-
 # HWUI
 debug.hwui.skia_atrace_enabled=false
 
@@ -19,36 +16,19 @@ persist.radio.rat_on=combine
 persist.radio.VT_HYBRID_ENABLE=1
 persist.sys.phh.ims.caf=true
 persist.sys.strictmode.disable=true
-persist.vendor.ims.enabled=1
-persist.vendor.ims.enable_ims=1
-persist.vendor.radio.calls.on.ims=1
-persist.vendor.radio.force_on_dc=true
-persist.vendor.radio.data_ltd_sys_ind=1
-persist.vendor.radio.data_con_rprt=1
-persist.vendor.wfc.ims.enabled=1
-ro.vendor.radio.5g=3
 persist.dbg.vonr_avail_ovr=1
 persist.radio.is_vonr_enabled_0=true
 persist.radio.is_vonr_enabled_1=true
 persist.radio.nr_mode=3
-persist.vendor.radio.5g=3
-persist.vendor.radio.5g_mode_pref=3
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
 ro.media.xml_variant.profiles=_tuna_v0
 
-# QTI
-ro.vendor.qti.va_aosp.support=1
-
 # Radio
-persist.vendor.data.mode=concurrent
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
-
-# Radio VoNR Calling
-persist.vendor.vonr_setting_support=1
 
 # WFD
 persist.debug.wfd.enable=1
