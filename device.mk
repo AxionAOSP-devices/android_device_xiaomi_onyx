@@ -260,6 +260,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
+    init.hbm_bridge.rc \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
@@ -274,6 +275,7 @@ PRODUCT_PACKAGES += \
     init.kernel.post_boot.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
+    hbm_bridge.sh \
     init.qcom.sh \
     init.qcrild.sh
 
@@ -568,8 +570,11 @@ AXION_CAMERA_FRONT_INFO := 20
 AXION_MAINTAINER := Zarathos_Ghost_Rider
 AXION_PROCESSOR := SM8735
 LINEAGE_BUILDTYPE := OFFICIAL
+TARGET_INCLUDE_AXFX := true
 TARGET_ENABLE_BLUR := true
-TARGET_ENABLE_BLUR := true
+HBM_SUPPORTED := true
+HBM_NODE := /data/vendor/display/hbm_mode
+
 
 # Display refresh rates
 TARGET_SUPPORTED_REFRESH_RATES := 60,90,120

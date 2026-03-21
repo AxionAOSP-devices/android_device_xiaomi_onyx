@@ -23,6 +23,7 @@ type vendor_bsp_data_log_file, data_file_type, file_type;
 
 # Display
 type vendor_sysfs_displayfeature, fs_type, sysfs_type;
+type vendor_display_data_hbm_file, data_file_type, file_type;
 
 # Fingerprint
 type sysfs_tp_fodstatus, fs_type, sysfs_type;

@@ -1,0 +1,8 @@
+service vendor.hbm_bridge /vendor/bin/hbm_bridge.sh
+    class main
+    user system
+    group system
+    disabled
+
+on property:persist.sys.hbmservice_support=true
+    start vendor.hbm_bridge

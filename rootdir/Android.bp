@@ -58,6 +58,19 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "hbm_bridge.sh",
+    src: "bin/hbm_bridge.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.hbm_bridge.rc",
+    src: "etc/init.hbm_bridge.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "charger_fw_fstab.qti",
     src: "etc/charger_fw_fstab.qti",
