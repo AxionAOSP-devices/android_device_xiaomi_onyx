@@ -62,7 +62,7 @@
 # Diag
 /data/vendor/bsplog(/.*)? u:object_r:vendor_bsp_data_log_file:s0
 /data/vendor/diag(/.*)? u:object_r:minidump_data_file:s0
-/data/vendor/display(/.*)? u:object_r:vendor_display_data_hbm_file:s0
+/data/vendor/display/hbm_mode u:object_r:vendor_display_data_hbm_file:s0
 
 # Displayfeature
 /(vendor|system/vendor)/bin/hbm_bridge\.sh u:object_r:hbm_bridge_exec:s0

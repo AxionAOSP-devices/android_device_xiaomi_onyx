@@ -3,14 +3,16 @@ type hbm_bridge_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(hbm_bridge)
 
-# Create and manage control file
-allow hbm_bridge vendor_display_data_hbm_file:dir create_dir_perms;
+# Create and manage control file in /data/vendor/display/
+allow hbm_bridge vendor_display_vendor_data_file:dir create_dir_perms;
 allow hbm_bridge vendor_display_data_hbm_file:file create_file_perms;
 
 # Write to disp_param
 allow hbm_bridge vendor_sysfs_displayfeature:dir search;
 allow hbm_bridge vendor_sysfs_displayfeature:file { getattr open read write };
 
-# Allow system_server (HbmService) to write to the control file
-allow system_server vendor_display_data_hbm_file:dir r_dir_perms;
+# Allow system_server (HbmService) to access the control file
+# Requires data_between_core_and_vendor_violators to satisfy Treble neverallow
+typeattribute system_server data_between_core_and_vendor_violators;
+allow system_server vendor_display_vendor_data_file:dir r_dir_perms;
 allow system_server vendor_display_data_hbm_file:file { getattr open read write };
