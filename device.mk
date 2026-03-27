@@ -564,20 +564,13 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/xiaomi/onyx/onyx-vendor.mk)
 
 #Axion Stuff
-TARGET_INCLUDES_LOS_PREBUILTS := true
-TARGET_ENABLE_BLUR := true
 AXION_CAMERA_REAR_INFO := 50,8
 AXION_CAMERA_FRONT_INFO := 20
 AXION_MAINTAINER := Zarathos_Ghost_Rider
 AXION_PROCESSOR := SM8735
 LINEAGE_BUILDTYPE := OFFICIAL
-
-#Axion Performance Mode
-PERF_GOV_SUPPORTED := true
-PERF_DEFAULT_GOV := walt
-GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
-GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
-TORCH_STR_SUPPORTED := true
+TARGET_ENABLE_BLUR := true
+TARGET_ENABLE_BLUR := true
 
 # Display refresh rates
 TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
