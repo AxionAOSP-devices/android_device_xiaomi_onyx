@@ -136,12 +136,21 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libsre.so',
         'odm/lib64/libtruetone.so',
         'odm/lib64/libvideomode.so',
-        'vendor/lib64/hw/camera.qcom.so',
         'vendor/lib64/libgnss.so'
     ): blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so'
+    ),
+
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V3-ndk.so'
+        )
+        .replace_needed(
+            'libprotobuf-cpp-full-21.12.so',
+            'libprotobuf-cpp-full-21.7.so'
     ),
 
     (
@@ -212,11 +221,15 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so'
+        )  
+       .replace_needed(
+            'libprotobuf-cpp-lite-21.12.so',
+            'libprotobuf-cpp-lite-21.7.so'
         )
         .replace_needed(
             'libtinyxml2.so',
             'libtinyxml2-v34.so'
-    ),
+        ),
 
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
@@ -385,6 +398,31 @@ blob_fixups: blob_fixups_user_type = {
 
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+
+    (
+        'vendor/bin/hw/qcrilNrd',
+        'vendor/bin/lowi-server',
+        'vendor/bin/qcc-vendor',
+        'vendor/bin/qesdk-manager',
+        'vendor/bin/qms',
+        'vendor/bin/qsap_dcfd',
+        'vendor/bin/qsap_sensors',
+        'vendor/bin/sensors.qti',
+        'vendor/bin/wfdhdcphalservice',
+        'vendor/bin/xtra-daemon',
+        'vendor/lib64/libizat_core.so',
+        'vendor/lib64/libqcrilNr.so',
+        'vendor/lib64/libqesdk_manager.so',
+        'vendor/lib64/libsensorcal.so'
+    ): blob_fixup()
+        .replace_needed(
+            'libprotobuf-cpp-full-21.12.so',
+            'libprotobuf-cpp-full-21.7.so'
+        )
+        .replace_needed(
+            'libprotobuf-cpp-lite-21.12.so',
+            'libprotobuf-cpp-lite-21.7.so'
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
