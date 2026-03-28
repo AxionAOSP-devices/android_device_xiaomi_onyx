@@ -102,7 +102,7 @@ BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=$(LINEAGE_VERSION) \
     mtdoops.fingerprint=$(LINEAGE_VERSION) \
     bootmonitor.fingerprint=$(LINEAGE_VERSION) \
-    sysctl.kernel.firmware_config.force_sysfs_fallback=1
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
     kpti=off
 	
 BOARD_BOOTCONFIG := \
