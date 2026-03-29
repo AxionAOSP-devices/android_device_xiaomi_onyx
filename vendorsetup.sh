@@ -3,7 +3,7 @@
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b bka https://github.com/sm8635-dev/hardware_xiaomi.git hardware/xiaomi
+git clone -b lineage-23.2 https://github.com/sm8635-dev/hardware_xiaomi.git hardware/xiaomi
 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
