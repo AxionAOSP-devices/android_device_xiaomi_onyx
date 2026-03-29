@@ -193,7 +193,7 @@ PRODUCT_PACKAGES += \
 
 # Dolby
 PRODUCT_PACKAGES += \
-    LunarisDolby
+    XiaomiDolby
 
 # Fastbootd
 PRODUCT_PACKAGES += \
