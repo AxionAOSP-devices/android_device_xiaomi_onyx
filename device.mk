@@ -577,6 +577,8 @@ TARGET_INCLUDE_AXFX := true
 TARGET_ENABLE_BLUR := true
 HBM_SUPPORTED := true
 HBM_NODE := /data/vendor/display/hbm_mode
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := walt
 
 
 # Display refresh rates
