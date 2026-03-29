@@ -7,6 +7,9 @@ init_daemon_domain(hbm_bridge)
 allow hbm_bridge vendor_display_vendor_data_file:dir create_dir_perms;
 allow hbm_bridge vendor_display_data_hbm_file:file create_file_perms;
 
+# Execute vendor toolbox commands (cat, echo, mkdir, sleep, etc.)
+allow hbm_bridge vendor_toolbox_exec:file { execute execute_no_trans open read getattr map };
+
 # Write to disp_param
 allow hbm_bridge vendor_sysfs_displayfeature:dir search;
 allow hbm_bridge vendor_sysfs_displayfeature:file { getattr open read write };
