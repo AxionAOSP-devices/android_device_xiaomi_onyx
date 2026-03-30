@@ -409,10 +409,6 @@ on post-fs-data
     chmod 0666 /sys/class/thermal/thermal_message/boost
     restorecon /sys/class/thermal/thermal_message/boost
 
-    # touch (htsr)
-    chown system system /proc/xm_htc_report_rate
-    chmod 0664 /proc/xm_htc_report_rate
-
     # Double Tap to Wake
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
