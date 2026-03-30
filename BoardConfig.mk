@@ -214,10 +214,6 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-ifneq (,$(filter user, $(TARGET_BUILD_VARIANT)))
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/test
-endif
-
 # Vendor security patch
 VENDOR_SECURITY_PATCH := 2026-01-01
 
