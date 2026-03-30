@@ -20,7 +20,7 @@ package com.xiaomi.settings.touchsampling;
 import android.os.Bundle;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.xiaomi.settings.R;
+import com.android.settingslib.widget.R;
 
 public class TouchSamplingSettingsActivity extends CollapsingToolbarBaseActivity {
 
