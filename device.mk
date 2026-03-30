@@ -570,20 +570,3 @@ PRODUCT_COPY_FILES += \
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/onyx/onyx-vendor.mk)
-
-#Axion Stuff
-AXION_CAMERA_REAR_INFO := 50,8
-AXION_CAMERA_FRONT_INFO := 20
-AXION_MAINTAINER := Zarathos_Ghost_Rider
-AXION_PROCESSOR := SM8735
-LINEAGE_BUILDTYPE := OFFICIAL
-TARGET_INCLUDE_AXFX := true
-TARGET_ENABLE_BLUR := true
-HBM_SUPPORTED := true
-HBM_NODE := /data/vendor/display/hbm_mode
-PERF_GOV_SUPPORTED := true
-PERF_DEFAULT_GOV := walt
-
-
-# Display refresh rates
-TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
