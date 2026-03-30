@@ -8,6 +8,9 @@ DEVICE_PATH := device/xiaomi/onyx
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# Inherit from proprietary files for miuicamera
+-include device/xiaomi/onyx-miuicamera/BoardConfig.mk
+
 # A/B
 AB_OTA_PARTITIONS := \
     boot \
@@ -140,6 +143,9 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
+
+# MiuiCamera
+CAMERA_PACKAGE_NAME := com.android.camera
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
