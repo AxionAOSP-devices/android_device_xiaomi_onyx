@@ -1,3 +1,4 @@
+allow platform_app hal_aidlbgservice_service:service_manager find;
 binder_call(system_server, hal_touchfeature_xiaomi_default)
 
 allow system_server hal_touchfeature_xiaomi_default:process signal;
