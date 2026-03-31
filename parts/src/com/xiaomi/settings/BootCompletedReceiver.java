@@ -19,8 +19,7 @@ import android.view.Display.HdrCapabilities;
 import com.xiaomi.settings.battery.ChargingLimitService;
 import com.xiaomi.settings.display.ColorModeService;
 import com.xiaomi.settings.touch.DoubleTapService;
-import com.xiaomi.settings.touchsampling.TouchSamplingUtils;
-import com.xiaomi.settings.touchsampling.TouchSamplingService;
+import com.xiaomi.settings.touch.TouchReportRateService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts";
@@ -52,10 +51,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         context.startServiceAsUser(new Intent(context, ChargingLimitService.class),
                 UserHandle.CURRENT);
 
-        // High Touch polling rate
-        TouchSamplingUtils.restoreSamplingValue(context);
-        context.startServiceAsUser(new Intent(context, TouchSamplingService.class),
-                UserHandle.CURRENT);
+        // Touch
+        TouchReportRateService.startService(context);
 
         // Override HDR types to enable Dolby Vision
         final DisplayManager displayManager = context.getSystemService(DisplayManager.class);
