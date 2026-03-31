@@ -19,6 +19,7 @@ import android.view.Display.HdrCapabilities;
 import com.xiaomi.settings.battery.ChargingLimitService;
 import com.xiaomi.settings.display.ColorModeService;
 import com.xiaomi.settings.touch.DoubleTapService;
+import com.xiaomi.settings.touch.TouchReportRateService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts";
@@ -49,6 +50,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Battery
         context.startServiceAsUser(new Intent(context, ChargingLimitService.class),
                 UserHandle.CURRENT);
+
+        // Touch
+        TouchReportRateService.startService(context);
 
         // Override HDR types to enable Dolby Vision
         final DisplayManager displayManager = context.getSystemService(DisplayManager.class);
