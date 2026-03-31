@@ -18,5 +18,4 @@ cc_library {
         "generated_kernel_headers",
         "//hardware/xiaomi:xiaomifingerprint_headers",
     ],
-    defaults: ["xiaomi_hardware_biometrics_config_default"],
 }
