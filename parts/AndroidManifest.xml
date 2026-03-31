@@ -47,6 +47,11 @@
             android:permission="TouchReportRateService">
         </service>
 
+        <service
+            android:name=".display.ColorService"
+            android:permission="ColorService">
+        </service>
+
         <activity
             android:name=".battery.ChargingControlActivity"
             android:label="@string/charging_control_title"
