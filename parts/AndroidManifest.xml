@@ -35,10 +35,6 @@
         </receiver>
 
         <service
-            android:name=".display.ColorModeService"
-            android:exported="false" />
-
-        <service
             android:name=".touch.DoubleTapService"
             android:exported="false" />
 
