@@ -173,9 +173,6 @@
         <item>all,GBK</item>
     </string-array>
 
-    <!-- Do not translate. Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">POCO F7</string>
-
     <!-- Integer thresholds, do not connect to APs with RSSI lower than these values  -->
     <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-85</integer>
     <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz">-80</integer>
