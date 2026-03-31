@@ -2,6 +2,3 @@ allow system_app vendor_sysfs_battery_supply:dir search;
 allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
 allow system_app vendor_sysfs_xm_power:dir search;
 allow system_app vendor_sysfs_xm_power:file rw_file_perms;
-
-# Color
-hal_client_domain(system_app, vendor_hal_displayfeature_xiaomi)
