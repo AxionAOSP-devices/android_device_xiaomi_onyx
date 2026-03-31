@@ -7,6 +7,7 @@
 android_app {
     name: "XiaomiParts",
     certificate: "platform",
+    defaults: ["SettingsLibDefaults"],
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
@@ -17,10 +18,8 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
-        "com.google.android.material_material",
         "org.lineageos.settings.resources",
-        "SettingsLib",
-        "vendor.xiaomi.hardware.displayfeature-V2-java"
+        "vendor.xiaomi.hardware.displayfeature_aidl-V2-java",
     ],
     required: [
         "privapp_whitelist_com.xiaomi.settings.xml",

@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Fingerprint
-$(call soong_config_set_bool,XIAOMI_BIOMETRICS_FINGERPRINT,USE_NEW_IMPL,true)
+$(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
     libudfpshandler
@@ -229,10 +229,6 @@ PRODUCT_COPY_FILES += \
 # Hypsy
 PRODUCT_PACKAGES += \
     xiaomi.system.hypsys.common-service-dummy
-
-# Micharge
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.micharge-service-dummy
 
 # Thermal Battery Manager
 PRODUCT_PACKAGES += \
@@ -343,12 +339,16 @@ PRODUCT_COPY_FILES += \
 # Memtrack
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
+    
+# Micharge
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.micharge-service-dummy
 
 # Network
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
-# NFC
+# NFC 
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
     com.android.nfc_extras
@@ -417,12 +417,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
 
-# QTI fwk-detect
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti_vendor # Needed by CNE app
-
 # Reduce system server verbosity.
-PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := falsez
 
 # Sensors
 PRODUCT_PACKAGES += \
