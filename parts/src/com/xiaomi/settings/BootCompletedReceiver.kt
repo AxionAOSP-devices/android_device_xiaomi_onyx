@@ -16,7 +16,6 @@ import android.view.Display
 import android.view.Display.HdrCapabilities
 
 import com.xiaomi.settings.battery.ChargingLimitService
-import com.xiaomi.settings.display.ColorModeService
 import com.xiaomi.settings.touch.DoubleTapService
 import com.xiaomi.settings.touch.TouchReportRateService
 
@@ -35,12 +34,6 @@ class BootCompletedReceiver : BroadcastReceiver() {
         private const val DEBUG = true
 
         private fun onLockedBootCompleted(context: Context) {
-            // Display
-            context.startServiceAsUser(
-                Intent(context, ColorModeService::class.java),
-                UserHandle.CURRENT
-            )
-
             // Double Tap to Wake
             context.startServiceAsUser(
                 Intent(context, DoubleTapService::class.java),
