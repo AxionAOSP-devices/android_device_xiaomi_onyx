@@ -12,4 +12,9 @@
     <string name="charging_control_title">Charging Control</string>
     <string name="charging_limit_title">Stop at Percentage</string>
     <string name="charging_limit_summary">Current limit: %1$d%%</string>
+
+    <!-- Touch settings -->
+    <string name="touch_title">Touch Sampling Rate</string>
+    <string name="touch_high_sampling_rate_title">High Touch Sampling Rate</string>
+    <string name="touch_high_sampling_rate_footer">Increase touchscreen polling rate</string>
 </resources>
