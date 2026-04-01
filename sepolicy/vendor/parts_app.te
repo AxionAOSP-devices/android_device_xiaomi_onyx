@@ -1,0 +1,10 @@
+# DT2W - execute dt2w_ctl directly without domain transition
+# Note: Apps cannot use domain_auto_trans due to neverallow restrictions
+allow parts_app dt2w_exec:file rx_file_perms;
+allow parts_app touchfeature_device:chr_file rw_file_perms;
+
+# Battery / Charging control
+allow parts_app vendor_sysfs_battery_supply:dir search;
+allow parts_app vendor_sysfs_battery_supply:file rw_file_perms;
+allow parts_app vendor_sysfs_xm_power:dir search;
+allow parts_app vendor_sysfs_xm_power:file rw_file_perms;

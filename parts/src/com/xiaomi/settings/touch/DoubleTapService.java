@@ -12,13 +12,12 @@ import android.content.Intent;
 import android.database.ContentObserver;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.SystemProperties;
 import android.provider.Settings;
 import android.util.Log;
 
 public class DoubleTapService extends Service {
     private static final String TAG = "DoubleTapService";
-    private static final String DT2W_PROP = "sys.xiaomi.dt2w";
+    private static final String DT2W_CTL = "/vendor/bin/dt2w_ctl";
 
     @Override
     public void onCreate() {
@@ -50,9 +49,12 @@ public class DoubleTapService extends Service {
         );
         Log.i(TAG, "DT2W setting changed: " + enabled);
         try {
-            SystemProperties.set(DT2W_PROP, String.valueOf(enabled));
+            Process p = Runtime.getRuntime().exec(
+                new String[]{DT2W_CTL, String.valueOf(enabled)}
+            );
+            p.waitFor();
         } catch (Exception e) {
-            Log.e(TAG, "Failed to set DT2W property", e);
+            Log.e(TAG, "Failed to execute dt2w_ctl", e);
         }
     }
 
