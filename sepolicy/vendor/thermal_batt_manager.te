@@ -5,6 +5,8 @@ init_daemon_domain(thermal_batt_manager)
 
 allow thermal_batt_manager vendor_sysfs_battery_supply:dir r_dir_perms;
 allow thermal_batt_manager vendor_sysfs_battery_supply:file rw_file_perms;
+allow thermal_batt_manager vendor_sysfs_xm_power:dir r_dir_perms;
+allow thermal_batt_manager vendor_sysfs_xm_power:file rw_file_perms;
 allow thermal_batt_manager sysfs_batteryinfo:dir r_dir_perms;
 allow thermal_batt_manager sysfs_batteryinfo:file rw_file_perms;
 allow thermal_batt_manager sysfs:dir search;

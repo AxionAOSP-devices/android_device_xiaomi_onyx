@@ -1,4 +1,3 @@
-type parts_app, domain;
 typeattribute parts_app mlstrustedsubject;
 
 app_domain(parts_app)

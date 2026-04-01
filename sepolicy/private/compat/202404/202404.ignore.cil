@@ -6,6 +6,7 @@
 (typeattributeset new_objects
   ( new_objects
     glyph_app
+    parts_app
     sltntc
     system_fingerprint_prop
     vendor_hal_displayfeature_xiaomi_default
