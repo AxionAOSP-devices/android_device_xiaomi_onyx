@@ -333,7 +333,7 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
 
 # Camera Extension
-system_ext/framework/camerax-vendor-extensions.jar
+system_ext/framework/camerax-vendor-extensions.jar:system/framework/camerax-vendor-extensions.jar;BOOT_JAR
 
 # Camera
 odm/bin/hw/misensor_camera
