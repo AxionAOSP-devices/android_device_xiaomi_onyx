@@ -418,7 +418,7 @@ PRODUCT_PACKAGES += \
     qspa_vendor.rc
 
 # Reduce system server verbosity.
-PRODUCT_SYSTEM_SERVER_DEBUG_INFO := falsez
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
 # Sensors
 PRODUCT_PACKAGES += \

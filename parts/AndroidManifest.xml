@@ -44,13 +44,11 @@
 
         <service
             android:name=".touch.TouchReportRateService"
-            android:permission="TouchReportRateService">
-        </service>
+            android:exported="false" />
 
         <service
             android:name=".display.ColorService"
-            android:permission="ColorService">
-        </service>
+            android:exported="false" />
 
         <activity
             android:name=".battery.ChargingControlActivity"
