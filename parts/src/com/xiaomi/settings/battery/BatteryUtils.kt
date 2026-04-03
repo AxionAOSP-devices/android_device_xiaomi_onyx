@@ -28,6 +28,10 @@ object BatteryUtils {
     fun setChargingSuspend(suspend: Boolean) {
         val file = File(INPUT_SUSPEND_PATH)
         if (!file.exists()) return
+        // The input_suspend node reports different read formats based on
+        // charger type (e.g. "buck eff_client:wire_qc 0" for QC), but
+        // always accepts "micharger buck 1/0" as the write format.
+        // Using the read format as the write format causes EINVAL.
         val value = "micharger buck " + if (suspend) "1" else "0"
         try {
             FileOutputStream(file).use { fos ->
