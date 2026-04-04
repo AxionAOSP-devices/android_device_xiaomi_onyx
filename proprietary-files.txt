@@ -2397,29 +2397,30 @@ vendor/bin/hw/android.hardware.gatekeeper-service-qti
 vendor/etc/init/android.hardware.gatekeeper-service-qti.rc
 vendor/lib64/hw/libqtigatekeeper.so
 
-# Graphics
+# Graphics (Adreno) - pinned from V306
 vendor/app/com.qualcomm.qti.gpudrivers.sun.api35/com.qualcomm.qti.gpudrivers.sun.api35.apk
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
-vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/vulkan.adreno.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libOpenCL_adreno.so
-vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libadreno_compiler_cl.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libgsl.so
-vendor/lib64/libkcl.so
-vendor/lib64/libkernelmanager.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libllvm-qgl.so
-vendor/lib64/libopencl_loader.so
+vendor/lib64/egl/eglSubDriverAndroid.so|8c8d2870c3a0dad1f57e8a0d5a9b41aea720f165
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|23feb6b56c0e15d0df3ffc78397d1115107afb8a
+vendor/lib64/egl/libGLESv1_CM_adreno.so|069926937af862ae042993ad8d09ca96cc6667a6
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|f30445926620276a97fba6b2e0d6fb1fcd5ca831
+vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|29140365d1ea359ce71bb57c725a0e8a3eed1e2b
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|8053615e4e3cae6cdc663c87b7fd1b0b340229ab
+vendor/lib64/egl/libq3dtools_esx.so|5070a41060bc12373023cabc2647723fa5b134db
+vendor/lib64/hw/vulkan.adreno.so|acf8e57a7bc7e702d53792e0f9522e5d2df2d29c
+vendor/lib64/libCB.so|da320c0aa48a29c09dfeca17d766dbba3c11fcbf
+vendor/lib64/libOpenCL.so|cbcb9bd50909719280bd2e7ae40bbc3e3f793e91
+vendor/lib64/libOpenCL_adreno.so|f60ab5f2c8408e6c2810666fb9bcc2e1e5e9f200
+vendor/lib64/libadreno_app_profiles.so|5066b1182f20c6e22582141ede310e73b30fc97a
+vendor/lib64/libadreno_compiler_cl.so|e2a954daf862c1a5086584fc905780a71da70718
+vendor/lib64/libadreno_utils.so|29ac5a5da7bd6d8ac2db234bc9fe771fb066993b
+vendor/lib64/libgsl.so|a8bb2d919b0b89a046e153c6227dab1c88480c04
+vendor/lib64/libkcl.so|02d582730e905a1e54d1c71bf10789996cb162e0
+vendor/lib64/libkernelmanager.so|5a6da26115a008d64d22a342d8f83f3ea7aa8540
+vendor/lib64/libllvm-glnext.so|e0871f4daf67d760ec1514274e5beb11fa70a578
+vendor/lib64/libllvm-qcom.so|44e0e424c60c784965d8e44310577a5ba9b55cee
+vendor/lib64/libllvm-qgl.so|0f82396ccd4329e05cbb2227048e527337c61ffa
+vendor/lib64/libgpudataproducer.so|9c93fcec9639f6ef1fbad42e86197546d66a8e91
+vendor/lib64/libopencl_loader.so|dc3dcb1df78fe5c2309ec566026521f4f700d28f
 
 # Graphics firmware
 odm/firmware/gen80000_zap.mbn
@@ -3277,13 +3278,13 @@ system_ext/lib64/libmmrtpencoder.so|4653d181f1808c1ca67675f55a81ec2cdb1b27c3
 system_ext/lib64/libwfdavenhancements.so|23b59faef6d423157e0948405ab2fda3c8d6a006
 system_ext/lib64/libwfdclient.so|bfd05e0b5306f6f3c734e4218ef2f0d9364bf6e2
 system_ext/lib64/libwfdcommonutils.so|c4b22b8dddb7e898f072d514a1287ebab43d7fb3
-system_ext/lib64/libwfdconfigutils.so|aa86af82a0075f84989b93a2d585c2f66ae115e0
+system_ext/lib64/libwfdconfigutils.so|4e8e70b201bbcfb6354e89b07056d84f5b9f2459
 system_ext/lib64/libwfddisplayconfig.so|6d5ed77a65d765e48a23f3519c6c7a5005945086
 system_ext/lib64/libwfdmminterface.so|cc61087a298aff53c32832cac5256606e202ce29
 system_ext/lib64/libwfdmmsink.so|122c1e66fc0e922dadb138be865c07dc2a28cd63
 system_ext/lib64/libwfdmmsrc_system.so|9910d4c2d3b8bdbdaebcaca8c601be3e6746112d
 system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|ed521da31e5bc3594e7bceff75891298c7af7f29
-system_ext/lib64/libwfdrtsp.so|bd7e26557b753214be53c233c3e2deac062c269c
+system_ext/lib64/libwfdrtsp.so|337d830acb59644c91a84dea4a5e5e2e33b8242d
 system_ext/lib64/libwfdservice.so|27dddd3ba79fef78b9cfa50b624a26e452356eb4
 system_ext/lib64/libwfdsinksm.so|0ad7086e7231b43db55bed59a44bd9dab5385b51
 system_ext/lib64/libwfduibcinterface.so|de8ae1660abbd14a6df278ae3e0e56296cefea19
