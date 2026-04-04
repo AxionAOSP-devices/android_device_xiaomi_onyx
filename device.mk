@@ -171,6 +171,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiDolby
 
+# Debloat
+PRODUCT_PACKAGES += \
+    RemovePackagesOnyx
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
