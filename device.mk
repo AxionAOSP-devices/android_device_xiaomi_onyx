@@ -243,7 +243,8 @@ PRODUCT_PACKAGES += \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
-    init.target.rc
+    init.target.rc \
+    init.sun.rc
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \

@@ -124,6 +124,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.sun.rc",
+    src: "etc/init.sun.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "ueventd-odm.rc",
     filename: "ueventd.rc",
     src: "etc/ueventd-odm.rc",
