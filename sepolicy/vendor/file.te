@@ -1,6 +1,9 @@
 # Audio
 type audio_socket, file_type;
 
+# Axion Performance
+type proc_vm, fs_type, proc_type;
+
 # Battery
 type vendor_sysfs_qcom_battery, fs_type, sysfs_type;
 
