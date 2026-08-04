@@ -2,9 +2,6 @@
 type audio_socket, file_type;
 
 # Axion Performance
-type proc_dirty, fs_type, proc_type;
-type proc_drop_caches, fs_type, proc_type;
-type proc_sched, fs_type, proc_type;
 type proc_vm, fs_type, proc_type;
 
 # Battery
