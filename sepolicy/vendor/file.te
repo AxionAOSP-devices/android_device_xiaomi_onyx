@@ -30,9 +30,6 @@ type sysfs_extcon, fs_type, sysfs_type;
 # Fingerprint
 type sysfs_tp_fodstatus, fs_type, sysfs_type;
 
-# GPU Boost
-type sysfs_gpu, fs_type, sysfs_type;
-
 # Info
 type vendor_sysfs_hardwareinfo, fs_type, sysfs_type;
 
@@ -45,7 +42,6 @@ type procfs_memory, fs_type, proc_type;
 
 # Sensor
 type vendor_aon_vendor_data_file, data_file_type, file_type;
-type vendor_sysfs_sensors, fs_type, sysfs_type;
 
 # Thermal
 type sys_thermal_wifi_limit, fs_type, sysfs_type;
@@ -64,9 +60,6 @@ type vendor_data_touchreport_file, data_file_type, file_type;
 
 # Walt
 type proc_walt, fs_type, proc_type;
-
-# Wakeup
-type sysfs_wakeup, fs_type, sysfs_type;
 
 # Wlan
 type vendor_mac_vendor_data_file, data_file_type, file_type, mlstrustedobject;
