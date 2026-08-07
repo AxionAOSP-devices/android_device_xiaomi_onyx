@@ -398,10 +398,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
 
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \
