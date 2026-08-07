@@ -85,39 +85,12 @@ def blob_fixup_graphic_buffer_size(
 blob_fixups: blob_fixups_user_type = {
     (
         'odm/bin/hw/vendor.xiaomi.hw.touchfeature-service',
-        'odm/lib64/libadaptivehdr.so',
-        'odm/lib64/libcolortempmode.so',
-        'odm/lib64/libdither.so',
-        'odm/lib64/libflatmode.so',
-        'odm/lib64/libhistprocess.so',
-        'odm/lib64/libmiBrightness.so',
-        'odm/lib64/libmiSensorCtrl.so',
-        'odm/lib64/libpaperMode.so',
-        'odm/lib64/librhytheyecare.so',
-        'odm/lib64/libsdr2hdr.so',
-        'odm/lib64/libsre.so',
-        'odm/lib64/libtruetone.so',
-        'odm/lib64/libvideomode.so',
         'vendor/lib64/hw/camera.qcom.so',
         'vendor/lib64/libgnss.so'
     ): blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so'
-    ),
-
-    'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl': blob_fixup()
-        .replace_needed(
-            'android.hardware.graphics.common-V5-ndk.so',
-            'android.hardware.graphics.common-V7-ndk.so'
-        )
-        .replace_needed(
-            'android.hardware.sensors-V2-ndk.so',
-            'android.hardware.sensors-V3-ndk.so'
-        )
-        .replace_needed(
-            'libtinyxml2.so',
-            'libtinyxml2-v34.so'
     ),
 
     (
@@ -149,9 +122,7 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinetintlesshdr.so',
         'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineyuvreprocess.so',
         'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineyuvsplit.so',
-        'odm/lib64/libmiXmlParser.so',
         'vendor/bin/hw/vendor.qti.camera.provider-service_64',
-        'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
         'vendor/bin/poweropt-service',
         'vendor/lib64/libaodoptfeature.so',
         'vendor/lib64/libapengine.so',
@@ -162,7 +133,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmicamera_aidl_provider.so',
         'vendor/lib64/libpowercore.so',
         'vendor/lib64/libpsmoptfeature.so',
-        'vendor/lib64/libsdmclient.so',
         'vendor/lib64/libsimulation.so',
         'vendor/lib64/libstandbyfeature.so',
         'vendor/lib64/soundfx/libquasar.so'
@@ -213,16 +183,6 @@ blob_fixups: blob_fixups_user_type = {
             ],
         ),
 
-    'odm/lib64/hw/displayfeature.default.so': blob_fixup()
-        .replace_needed(
-            'android.hardware.sensors-V2-ndk.so',
-            'android.hardware.sensors-V3-ndk.so'
-        )
-        .replace_needed(
-            'libtinyxml2.so',
-            'libtinyxml2-v34.so'
-    ),
-
     (
         'odm/lib64/libAncHumanPreviewBokeh.so',
         'odm/lib64/libMiEmojiEffect.so',
@@ -268,9 +228,6 @@ blob_fixups: blob_fixups_user_type = {
             r'for kernel_ver_dir in \$\{system_dlkm_dir\}/\*;',
             'for kernel_ver_dir in ${system_dlkm_dir} ${system_dlkm_dir}/*;',
         ),
-
-    'vendor/etc/clstc_config_library.xml': blob_fixup()
-        .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
 
     'vendor/etc/sensors/hals.conf': blob_fixup()
         .regex_replace('.*vl53l8.*\n?', ''),
@@ -360,14 +317,6 @@ blob_fixups: blob_fixups_user_type = {
             blob_fixup_graphic_buffer_size,
             [
                 '_ZN18MAWBufferAllocator18AllocGraphicBufferEjjijPPcRi',
-            ],
-        ),
-
-    'vendor/lib64/libgpu_tonemapper.so': blob_fixup()
-        .call(
-            blob_fixup_graphic_buffer_size,
-            [
-                '_ZN15EGLImageWrapper4wrapEPKv',
             ],
         ),
 
