@@ -141,7 +141,6 @@ odm/etc/audio/sku_tuna/adsp_sleep_monitor.conf
 odm/etc/audio/sku_tuna/mixer_paths_overlay_dynamic.xml
 odm/etc/audio/sku_tuna/mixer_paths_overlay_static.xml
 odm/etc/audio/sku_tuna/mixer_paths_tuna_mtp.xml
-odm/etc/audio/sku_tuna/resourcemanager_tuna_mtp.xml
 odm/etc/backend_conf.xml
 odm/etc/backend_conf_sia.xml
 odm/etc/sixth_wrapper_cfg.xml

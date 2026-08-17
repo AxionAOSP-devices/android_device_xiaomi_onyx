@@ -98,6 +98,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_module_config_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_module_config_primary.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_tuna/audio_policy_configuration.xml
 
+# Audio: override stock resourcemanager to route VOIP_RX volume through the
+# ACDB calibration path (the stock "volume set param" path is silently ignored
+# by the CAF HAL, leaving WhatsApp/call volume stuck)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/resourcemanager_tuna_mtp.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/sku_tuna/resourcemanager_tuna_mtp.xml
+
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/../pal/configs/sun/Hapticsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/Hapticsconfig.xml \
     $(AUDIO_HAL_DIR)/configs/sun/quasar_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_tuna/quasar_config.xml \
