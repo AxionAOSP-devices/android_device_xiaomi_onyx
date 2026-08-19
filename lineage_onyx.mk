@@ -48,5 +48,3 @@ HBM_NODE := /data/vendor/display/hbm_mode
 BYPASS_CHARGE_SUPPORTED := true
 BYPASS_CHARGE_TOGGLE_PATH ?= /sys/class/xm_power/charger/smart_charge/smart_night
 TARGET_INCLUDE_AXFX := true
-PERF_GOV_SUPPORTED := true
-PERF_DEFAULT_GOV := walt
