@@ -149,6 +149,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Debloat
+PRODUCT_PACKAGES += \
+    RemovePackagesOnyx
+
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapstartsize?=24m \
