@@ -32,7 +32,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Axion Device Configuration
 AXION_MAINTAINER := Zarathos_Ghost_Rider
-AXION_PROCESSOR := Snapdragon 8s Gen 4
+AXION_PROCESSOR := Snapdragon®_8s_Gen_4
 
 # Camera Info
 AXION_CAMERA_REAR_INFO := 50,8
