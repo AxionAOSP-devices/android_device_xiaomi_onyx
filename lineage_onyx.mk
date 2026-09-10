@@ -48,3 +48,4 @@ HBM_NODE := /data/vendor/display/hbm_mode
 BYPASS_CHARGE_SUPPORTED := true
 BYPASS_CHARGE_TOGGLE_PATH ?= /sys/class/xm_power/charger/smart_charge/smart_night
 TARGET_INCLUDE_AXFX := true
+TARGET_INCLUDE_GOOGLE_TELECOMM := false
