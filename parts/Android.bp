@@ -11,6 +11,10 @@ android_app {
     platform_apis: true,
     privileged: true,
     system_ext_specific: true,
+    overrides: [
+        "Camelot",
+        "Jelly",
+    ],
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
