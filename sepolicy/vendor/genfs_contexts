@@ -8,9 +8,11 @@ genfscon proc /sys/kernel/timer_migration u:object_r:proc_sched:s0
 genfscon proc /sys/kernel/printk_ratelimit u:object_r:proc_sched:s0
 genfscon proc /sys/kernel/printk_ratelimit_burst u:object_r:proc_sched:s0
 
-# Gpu Boost 
+# Gpu Boost
 genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/available_frequencies u:object_r:sysfs_gpu:s0
 genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/min_freq u:object_r:sysfs_gpu:s0
+genfscon sysfs /class/kgsl/kgsl-3d0/max_gpuclk u:object_r:vendor_sysfs_kgsl_max_gpuclk:s0
+genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk u:object_r:vendor_sysfs_kgsl_max_gpuclk:s0
 
 # Battery
 genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_qcom_battery:s0

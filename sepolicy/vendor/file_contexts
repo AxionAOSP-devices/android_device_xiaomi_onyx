@@ -82,6 +82,9 @@
 # GNSS
 /(odm|vendor|vendor/odm|system/vendor/odm)/bin/hw/android\.hardware\.gnss.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
 
+# Gpu
+/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk u:object_r:vendor_sysfs_kgsl_max_gpuclk:s0
+
 # HypSys
 /vendor/bin/hw/xiaomi\.system\.hypsys\.common-service-dummy    u:object_r:hal_hypsys_vendor_exec:s0
 
