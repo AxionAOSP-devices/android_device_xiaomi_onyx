@@ -2,9 +2,11 @@
 ro.product.property_source_order=odm,vendor,product,system_ext,system
 
 # Audio
+# fpsop game effect must stay off: with misound disabled the stock HAL falls
+# back to the software processing path, producing static noise in games.
 persist.vendor.audio.fpsop.game.effect.speaker=false
-persist.vendor.audio.fpsop.game.effect.switch=true
-persist.vendor.audio.fpsop.game.effect=true
+persist.vendor.audio.fpsop.game.effect.switch=false
+persist.vendor.audio.fpsop.game.effect=false
 persist.vendor.audio.game.effect.version=2
 persist.vendor.audio.induce_crash=false
 persist.vendor.audio.induce_crash_generic=false

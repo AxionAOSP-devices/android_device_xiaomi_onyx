@@ -1,0 +1,3 @@
+# RIL
+# Public so vendor policy can read ro.miui.build.region.
+system_public_prop(system_miui_region_prop)

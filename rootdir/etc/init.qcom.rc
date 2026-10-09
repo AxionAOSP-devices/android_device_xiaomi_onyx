@@ -258,6 +258,11 @@ on boot
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
 
+    # Keep the fpsop game effect off (persist props survive across flashes)
+    setprop persist.vendor.audio.fpsop.game.effect false
+    setprop persist.vendor.audio.fpsop.game.effect.switch false
+    setprop persist.vendor.audio.misound.disable true
+
     # Create directory used for dump collection
     mkdir /data/vendor/ssrdump 0770 root system
 
