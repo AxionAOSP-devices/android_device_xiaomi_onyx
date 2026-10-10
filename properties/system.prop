@@ -8,6 +8,11 @@ persist.vendor.cne.feature=1
 ro.product.marketname=POCO F7
 ro.product.mod_device=onyx_global
 
+# LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.relaxed_available_memory=true
+ro.lmk.swap_compression_ratio=2
+
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
