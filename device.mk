@@ -551,4 +551,4 @@ $(call inherit-product, vendor/xiaomi/onyx/onyx-vendor.mk)
 $(call inherit-product, device/axion/common/config/soc_map.mk)
 
 # Vendor MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/onyx-miuicamera/device.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/onyx-leicacamera/onyx-leicacamera-vendor.mk)
