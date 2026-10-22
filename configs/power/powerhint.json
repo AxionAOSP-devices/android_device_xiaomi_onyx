@@ -379,7 +379,9 @@
             "Values": [
                 "0",
                 "20",
+                "30",
                 "40",
+                "50",
                 "60",
                 "100"
             ],
@@ -393,6 +395,7 @@
                 "0",
                 "20",
                 "30",
+                "40",
                 "50",
                 "100"
             ],
@@ -1371,7 +1374,7 @@
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "UclampTAMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "30"
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -1383,7 +1386,7 @@
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "UclampFGMin",
             "Duration": 0,
-            "Value": "30"
+            "Value": "20"
         },
         {
             "PowerHint": "INTERACTION",
@@ -1527,7 +1530,7 @@
             "PowerHint": "LAUNCH",
             "Node": "UclampTAMin",
             "Duration": 3000,
-            "Value": "40"
+            "Value": "50"
         },
         {
             "PowerHint": "LAUNCH",
@@ -1539,7 +1542,7 @@
             "PowerHint": "LAUNCH",
             "Node": "UclampFGMin",
             "Duration": 3000,
-            "Value": "50"
+            "Value": "40"
         },
         {
             "PowerHint": "LAUNCH",
