@@ -6,3 +6,10 @@ allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
 # Axion custom power hints (AxDragonite)
 allow hal_power_default sysfs_devices_system_cpu:dir r_dir_perms;
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+
+# GPU nodes used by powerhint.json (devfreq/min_freq, idle_timer, min/max_pwrlevel)
+allow hal_power_default sysfs_gpu:dir r_dir_perms;
+allow hal_power_default sysfs_gpu:file rw_file_perms;
+allow hal_power_default vendor_sysfs_kgsl:dir r_dir_perms;
+allow hal_power_default vendor_sysfs_kgsl:lnk_file r_file_perms;
+allow hal_power_default vendor_sysfs_kgsl:file rw_file_perms;
