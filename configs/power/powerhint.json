@@ -431,7 +431,7 @@
                 "2208000",
                 "1632000",
                 "1401600",
-                "633600"
+                "480000"
             ],
             "DefaultIndex": 5,
             "ResetOnInit": true
@@ -454,7 +454,7 @@
             "Name": "sysDevicesSystemCpuCpu7CpufreqScalingMinFreq",
             "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq",
             "Values": [
-                "3168000",
+                "3206400",
                 "2956800",
                 "2745600",
                 "2515200",
@@ -462,7 +462,7 @@
                 "1670400",
                 "1478400",
                 "1363200",
-                "633600"
+                "480000"
             ],
             "DefaultIndex": 8,
             "ResetOnInit": true
@@ -506,7 +506,7 @@
             "Values": [
                 "1670400",
                 "2169600",
-                "3168000"
+                "3206400"
             ],
             "DefaultIndex": 2,
             "ResetOnInit": true
@@ -1698,7 +1698,7 @@
             "PowerHint": "CPU_BENCHMARK",
             "Node": "sysDevicesSystemCpuCpu7CpufreqScalingMaxFreq",
             "Duration": 0,
-            "Value": "3168000"
+            "Value": "3206400"
         },
         {
             "PowerHint": "CPU_BENCHMARK",
