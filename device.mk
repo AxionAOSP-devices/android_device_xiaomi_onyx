@@ -55,7 +55,12 @@ PRODUCT_PACKAGES += \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
+    libagmipcservice \
     libaudiochargerlistener \
+    libaudiocorehal.default \
+    libaudiocorehal.qti \
+    libaudioeffecthal.qti \
+    libaudioplatformconverter.qti \
     libbatterylistener \
     libcustomva_intf \
     libfmpal \
@@ -63,8 +68,12 @@ PRODUCT_PACKAGES += \
     libhotword_intf \
     libpaleventnotifier \
     libpalipcservice \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
     libsndcardparser \
     libsoundtriggerhal.qti \
+    libvolumelistener \
     libvui_intf \
     qtiaudiohalvendorextn
 
