@@ -17,6 +17,9 @@ ro.lmk.swap_compression_ratio=2
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
 ro.media.xml_variant.profiles=_tuna_v0
+ro.media.xml_variant.codecs_performance=_tuna_v0
+ro.media.xml_variant.codecs=_tuna_v0
+vendor.media.target_variant=_tuna_v0
 
 # QTI
 ro.vendor.qti.va_aosp.support=1
