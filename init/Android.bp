@@ -1,111 +1,112 @@
 sh_binary {
     name: "init.camera.wmfix.sh",
-    src: "bin/init.camera.wmfix.sh",
+    src: "init.camera.wmfix.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.class_main.sh",
-    src: "bin/init.class_main.sh",
+    src: "init.class_main.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-memory.sh",
-    src: "bin/init.kernel.post_boot-memory.sh",
+    src: "init.kernel.post_boot-memory.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-tuna.sh",
-    src: "bin/init.kernel.post_boot-tuna.sh",
+    src: "init.kernel.post_boot-tuna.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-tuna_default_2_3_2_1.sh",
-    src: "bin/init.kernel.post_boot-tuna_default_2_3_2_1.sh",
+    src: "init.kernel.post_boot-tuna_default_2_3_2_1.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot.sh",
-    src: "bin/init.kernel.post_boot.sh",
+    src: "init.kernel.post_boot.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.class_core.sh",
-    src: "bin/init.qcom.class_core.sh",
+    src: "init.qcom.class_core.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.early_boot.sh",
-    src: "bin/init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.post_boot.sh",
-    src: "bin/init.qcom.post_boot.sh",
+    src: "init.qcom.post_boot.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.sh",
-    src: "bin/init.qcom.sh",
+    src: "init.qcom.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qti.kernel.sh",
-    src: "bin/init.qti.kernel.sh",
+    src: "init.qti.kernel.sh",
     vendor: true,
 }
+
 prebuilt_etc {
     name: "charger_fw_fstab.qti",
-    src: "etc/charger_fw_fstab.qti",
+    src: "charger_fw_fstab.qti",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "fstab.qcom",
-    src: "etc/fstab.qcom",
+    src: "fstab.qcom",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.qcom.rc",
-    src: "etc/init.qcom.rc",
+    src: "init.qcom.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.onyx.rc",
-    src: "etc/init.onyx.rc",
+    src: "init.onyx.rc",
     sub_dir: "init",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.qti.kernel.rc",
-    src: "etc/init.qti.kernel.rc",
+    src: "init.qti.kernel.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.recovery.qcom.rc",
-    src: "etc/init.recovery.qcom.rc",
+    src: "init.recovery.qcom.rc",
     sub_dir: "init",
     recovery: true,
 }
 
 prebuilt_etc {
     name: "init.target.rc",
-    src: "etc/init.target.rc",
+    src: "init.target.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
@@ -113,32 +114,32 @@ prebuilt_etc {
 prebuilt_etc {
     name: "ueventd-odm.rc",
     filename: "ueventd.rc",
-    src: "etc/ueventd-odm.rc",
+    src: "ueventd-odm.rc",
     device_specific: true,
 }
 
 prebuilt_etc {
     name: "ueventd-odm-onyx.rc",
-    src: "etc/ueventd-odm-onyx.rc",
+    src: "ueventd-odm-onyx.rc",
     device_specific: true,
 }
 
 prebuilt_etc {
     name: "ueventd.qcom.rc",
     filename: "ueventd.rc",
-    src: "etc/ueventd.qcom.rc",
+    src: "ueventd.qcom.rc",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "fstab.zram",
-    src: "etc/fstab.zram",
+    src: "fstab.zram",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.sm8735.rc",
-    src: "etc/init.sm8735.rc",
+    src: "init.sm8735.rc",
     sub_dir: "init",
     vendor: true,
 }
