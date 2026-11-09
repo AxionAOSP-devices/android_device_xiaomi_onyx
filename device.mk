@@ -134,6 +134,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/camerax-vendor-extensions.xml
 
+# Charging
+PRODUCT_PACKAGES += \
+    charging
+
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
@@ -265,7 +270,8 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.sh
 
 PRODUCT_PACKAGES += \
-    init.sm8735.rc
+    init.sm8735.rc \
+    init_thermal-engine-v2.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \

@@ -4,7 +4,6 @@
 #
 
 import /vendor/etc/init/hw/init.batterysecret.rc
-import /vendor/etc/init/hw/init.mi_thermald.rc
 
 on early-init
     export ADSP_LIBRARY_PATH /odm/lib/rfsa/adsp;/vendor/lib/rfsa/adsp/;/system/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/dsp
@@ -46,15 +45,10 @@ on boot
     # END: enableForceFullRecoveryForCRC
 
     #MIUI ADD:Thermal_NodeReq
-    chown system system /sys/class/thermal/thermal_message/sconfig
-    chown system system /sys/class/thermal/thermal_message/balance_mode
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/torch_real_level
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
-    chown system system /sys/class/thermal/thermal_message/charger_temp
     chown system system /sys/class/thermal/power_save/powersave_mode
     chown system system /sys/class/thermal/power_save/power_level
-    chown system system /sys/class/thermal/thermal_message/board_sensor_temp_comp
-    chown system system /sys/class/thermal/thermal_message/cpu_nolimit_temp
     #END Thermal_NodeReq
 
     # Xiaomi touch
@@ -154,12 +148,6 @@ on post-fs-data
     chown system system /sys/class/mi_display/disp-DSI-0/doze_brightness
     chmod 0664 /sys/class/mi_display/disp-DSI-0/doze_brightness
 
-    # thermal config path
-    mkdir /data/vendor/thermal 0771 root system
-    mkdir /data/vendor/thermal/config 0771 root system
-    chmod 0666 /sys/class/thermal/thermal_message/boost
-    restorecon /sys/class/thermal/thermal_message/boost
-
     # add torch node for cit && mmi
     chown system system /sys/class/leds/led:torch_0/brightness
     chown system system /sys/class/leds/led:torch_1/brightness
@@ -219,9 +207,6 @@ on property:persist.vendor.ssr.restart_level=ALL_DISABLE
 on property:sys.boot_completed=1
     write /dev/kmsg "start qrtr-lookup after Boot completed "
     start qrtr-lookup
-
-    # Set thermal mode to mgame
-    write /sys/devices/virtual/thermal/thermal_message/sconfig 19
 
     # for online boot cpu
     wait /sys/class/thermal/thermal_message/boot_complete
