@@ -2785,6 +2785,7 @@ vendor/lib64/libqti-scenariod.so
 vendor/lib64/libqti-sslite.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
+vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
 
 # Power-off alarm
 system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
